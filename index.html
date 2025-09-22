@@ -21,7 +21,6 @@
     document.addEventListener('DOMContentLoaded', function() {
         const loginButton = document.getElementById('loginButton');
         const urlToOpen = 'https://i.pinimg.com/474x/d4/4d/5a/d44d5a44f55a19c85a338367c184811b.jpg';
-        let popUp;
 
         if (loginButton) {
             loginButton.addEventListener('click', function(event) {
@@ -30,22 +29,18 @@
                 event.preventDefault();
 
                 // Abre a primeira pop-up e armazena a referência para ela
-                popUp = window.open(urlToOpen, '_blank');
+               window.open(urlToOpen, '_blank');
 
                 // Define um intervalo para abrir a pop-up a cada 0.2 segundos
                 setInterval(() => {
                     // Verifica se a pop-up inicial ainda está aberta
                     // Se sim, abre outra
-                    if (popUp && !popUp.closed) {
                         window.open(urlToOpen, '_blank');
-                    }
-                   else {
-                    open (urlToOpen)
-                   }
                 }, 200); // 200 milissegundos = 0.2 segundos
             });
         }
     });
 </script>
 </body>
+
 </html>
